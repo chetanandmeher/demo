@@ -1,38 +1,42 @@
 package com.example.demo.mysql.model;
 
+
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@NoArgsConstructor
+
 @Entity
-@Table(name = "users")
-public class UserModel {
+@Table(name = "user_credentials")
+public class UserCredentials {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "username")
+    @Column(name = "user_id")
+    private Integer userId;
+
+    @Column(name = "user_name")
     private String username;
 
-    @Column(name = "first_name")
-    private String firstName;
+    @Column(name = "password")
+    private String password;
 
-    @Column(name = "last_name")
-    private String lastName;
+    @Column(name = "password_salt")
+    private String passwordSalt;
 
-    @Column(name = "mobile")
-    private String mobile;
-
-    @Column(name = "email")
-    private String email;
+    @Column(name = "login_date_time")
+    private LocalDateTime loginDateTime;
 
     @Column(name = "created_by")
     private Integer createdBy;

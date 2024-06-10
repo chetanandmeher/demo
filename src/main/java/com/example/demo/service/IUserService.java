@@ -1,16 +1,21 @@
 package com.example.demo.service;
 
-import com.example.demo.dto.UserDto;
+import com.example.demo.dto.request.UserRequestDto;
+import com.example.demo.dto.response.UserResponseDto;
+
+import java.util.List;
 
 public interface IUserService {
 
-    public UserDto getUserById(Integer id);
+    public UserResponseDto getUserById(Integer id);
 
-    public UserDto createUser(UserDto userDto);
+    public List<UserResponseDto> getAllUsers();
 
-    public UserDto updateUser(UserDto userDto);
+    public UserResponseDto createUser(UserRequestDto userDto);
 
-    public UserDto updatePartialUser(UserDto userDto);
+    public UserRequestDto updateUser(UserRequestDto userDto);
+
+    public UserRequestDto updatePartialUserById(UserRequestDto userDto, Integer id);
 
     public void deleteUserById(Integer Id);
 

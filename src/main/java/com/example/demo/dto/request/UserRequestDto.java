@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.example.demo.dto.request;
 
 import lombok.*;
 
@@ -10,10 +10,11 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 // Dto : data transfer object - used to store data that we want to show
-public class UserDto {
+public class UserRequestDto {
 
     private Integer id;
     private String username;
+    private String password;
     private String firstName;
     private String lastName;
     private String mobile;

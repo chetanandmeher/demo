@@ -1,4 +1,4 @@
-CREATE TABLE `demo-app`.`users` (
+CREATE TABLE `demo-class`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(10) NULL,
   `first_name` VARCHAR(20) NULL,
@@ -11,3 +11,7 @@ CREATE TABLE `demo-app`.`users` (
   `updated_at` DATETIME NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `username_UNIQUE` (`username` ASC) VISIBLE);
+
+ ALTER TABLE `demo-class`.`users`
+    DROP COLUMN `username`,
+    DROP INDEX `username_UNIQUE`;
