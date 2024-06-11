@@ -26,7 +26,7 @@ public class UserCredentials {
     @Column(name = "user_id")
     private Integer userId;
 
-    @Column(name = "user_name")
+    @Column(name = "username")
     private String username;
 
     @Column(name = "password")

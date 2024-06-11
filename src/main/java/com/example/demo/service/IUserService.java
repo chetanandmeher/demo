@@ -13,9 +13,9 @@ public interface IUserService {
 
     public UserResponseDto createUser(UserRequestDto userDto);
 
-    public UserRequestDto updateUser(UserRequestDto userDto);
+    public UserResponseDto updateUser(UserRequestDto userDto);
 
-    public UserRequestDto updatePartialUserById(UserRequestDto userDto, Integer id);
+    public UserResponseDto updatePartialUserById(UserRequestDto userDto, Integer id);
 
     public void deleteUserById(Integer Id);
 
